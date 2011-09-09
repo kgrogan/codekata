@@ -1,0 +1,18 @@
+<?php
+/**
+ * @package     StringCalculator
+ * @license     http://www.opensource.org/licenses/mit-license.html
+ * @copyright   Full license/copyright information can be found in the LICENSE file distributed with this source code.
+ */
+
+require_once __DIR__.'/src/main/lib/vendor/symfony/src/Symfony/Component/ClassLoader/UniversalClassLoader.php';
+
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+
+$loader = new UniversalClassLoader();
+$loader->registerNamespaces(array(
+    'StringCalculator'  => __DIR__.'/src/main/lib',
+    'Symfony'           => __DIR__.'/src/main/lib/vendor/symfony/src',
+));
+
+$loader->register();
